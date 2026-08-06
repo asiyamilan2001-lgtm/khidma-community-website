@@ -16,8 +16,8 @@ body {
 /* Navigation */
 
 header {
-    background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(106, 27, 154, 0.15);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -33,9 +33,9 @@ header {
 
 
 .logo {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 700;
-    color: #0b6b6f;
+    color: #6A1B9A;
 }
 
 
@@ -48,17 +48,19 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #4A148C;
     font-weight: 500;
+    transition: 0.3s;
 }
 
 
 .nav-links a:hover {
-    color: #0b6b6f;
+    color: #D4A017;
 }
 
 
-/* Hero Section */
+
+/* Hero */
 
 .hero {
 
@@ -69,8 +71,8 @@ header {
 
     background:
     linear-gradient(
-        rgba(0,0,0,0.45),
-        rgba(0,0,0,0.45)
+    rgba(74,20,140,0.75),
+    rgba(106,27,154,0.75)
     ),
     url("../images/community.jpg");
 
@@ -90,7 +92,8 @@ header {
 
 .hero h1 {
 
-    font-size: 52px;
+    font-size: 55px;
+    line-height: 1.2;
     margin-bottom: 20px;
 
 }
@@ -104,40 +107,47 @@ header {
 }
 
 
+
+/* Buttons */
+
 .btn {
 
     display: inline-block;
-    background: #d4a017;
+    background: #D4A017;
     color: white;
-    padding: 14px 30px;
-    border-radius: 30px;
+    padding: 14px 35px;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
+    transition: 0.3s;
 
 }
 
 
 .btn:hover {
 
-    opacity: 0.85;
+    background: #b8860b;
+    transform: translateY(-3px);
 
 }
 
 
-/* Welcome Section */
+
+/* Sections */
 
 .welcome {
 
-    padding: 70px 10%;
+    padding: 80px 10%;
     text-align: center;
 
 }
 
 
+.welcome h1,
 .welcome h2 {
 
-    font-size: 36px;
-    color: #0b6b6f;
+    color: #6A1B9A;
+    font-size: 38px;
     margin-bottom: 20px;
 
 }
@@ -145,96 +155,114 @@ header {
 
 .welcome p {
 
-    max-width: 800px;
+    max-width: 850px;
     margin: auto;
+    font-size: 17px;
 
 }
+
 
 
 /* Cards */
 
 .cards {
 
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     gap: 30px;
-    padding: 50px 8%;
+    padding: 60px 8%;
 
 }
 
 
 .card {
 
-    flex: 1;
-    padding: 30px;
-    background: #f7f7f7;
-    border-radius: 15px;
-    text-align: center;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+
+    border-top: 5px solid #6A1B9A;
+
+    box-shadow:
+    0 10px 25px rgba(106,27,154,0.12);
+
+    transition: 0.3s;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-8px);
 
 }
 
 
 .card h3 {
 
-    color: #0b6b6f;
+    color: #6A1B9A;
     margin-bottom: 15px;
 
 }
+
 
 
 /* Call To Action */
 
 .call-to-action {
 
-    background: #0b6b6f;
-    color: white;
-    padding: 70px 10%;
-    text-align: center;
+    background:
+    linear-gradient(
+    135deg,
+    #6A1B9A,
+    #4A148C
+    );
+
+    color:white;
+    padding:80px 10%;
+    text-align:center;
 
 }
 
 
 .call-to-action h2 {
 
-    margin-bottom: 20px;
+    font-size:36px;
+    margin-bottom:20px;
 
 }
 
-
-.call-to-action .btn {
-
-    margin-top: 20px;
-
-}
 
 
 /* Footer */
 
 footer {
 
-    text-align: center;
-    padding: 25px;
-    background: #222;
-    color: white;
+    background:#2d0b3d;
+    color:white;
+    text-align:center;
+    padding:30px;
 
 }
+
 
 
 /* Mobile */
 
 @media(max-width:768px){
 
-    .nav-links{
-        display:none;
-    }
+.nav-links{
+    display:none;
+}
 
 
-    .hero h1{
-        font-size:36px;
-    }
+.hero h1{
+    font-size:38px;
+}
 
 
-    .cards{
-        flex-direction:column;
-    }
+.cards{
+    grid-template-columns:1fr;
+}
 
 }
