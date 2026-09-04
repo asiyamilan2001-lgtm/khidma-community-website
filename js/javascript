@@ -1,46 +1,52 @@
-
-Those **must NOT be inside the actual `.js` file**. If they are there, the browser treats them as invalid JavaScript and the entire script fails — which is exactly why pressing the menu button does nothing.
-
-### Do this exactly
-
-Open:
-
-**`js` → `script.js`**
-
-Delete **everything** currently inside it, then replace it with this **full file**:
-
-```javascript
 document.addEventListener("DOMContentLoaded", function () {
 
     console.log("Khidma website loaded successfully");
 
-    /* =========================
+
+    /* =====================================================
        MOBILE NAVIGATION
-    ========================== */
+    ===================================================== */
 
     const menuToggle = document.querySelector(".menu-toggle");
+
     const navLinks = document.querySelector("#main-navigation");
 
+
+    /* =====================================================
+       CHECK THAT THE MENU EXISTS
+    ===================================================== */
+
     if (!menuToggle || !navLinks) {
-        console.error("Khidma mobile navigation elements not found.");
+
+        console.error(
+            "Khidma navigation could not be found."
+        );
+
         return;
+
     }
 
-    /* =========================
-       OPEN / CLOSE MENU
-    ========================== */
+
+    /* =====================================================
+       OPEN / CLOSE MOBILE MENU
+    ===================================================== */
 
     menuToggle.addEventListener("click", function (event) {
 
         event.preventDefault();
+
         event.stopPropagation();
 
-        const isOpen = navLinks.classList.toggle("open");
+
+        const isOpen =
+            navLinks.classList.toggle("open");
+
 
         menuToggle.setAttribute(
             "aria-expanded",
             isOpen ? "true" : "false"
         );
+
 
         menuToggle.setAttribute(
             "aria-label",
@@ -52,11 +58,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    /* =========================
-       CLOSE MENU WHEN LINK IS CLICKED
-    ========================== */
+    /* =====================================================
+       CLOSE MENU WHEN A LINK IS CLICKED
+    ===================================================== */
 
-    const navigationLinks = navLinks.querySelectorAll("a");
+    const navigationLinks =
+        navLinks.querySelectorAll("a");
+
 
     navigationLinks.forEach(function (link) {
 
@@ -64,10 +72,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             navLinks.classList.remove("open");
 
+
             menuToggle.setAttribute(
                 "aria-expanded",
                 "false"
             );
+
 
             menuToggle.setAttribute(
                 "aria-label",
@@ -79,67 +89,78 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    /* =========================
+    /* =====================================================
        CLOSE MENU WHEN CLICKING OUTSIDE
-    ========================== */
+    ===================================================== */
 
-    document.addEventListener("click", function (event) {
+    document.addEventListener(
+        "click",
+        function (event) {
 
-        const clickedInsideNavigation =
-            navLinks.contains(event.target);
-
-        const clickedMenuButton =
-            menuToggle.contains(event.target);
-
-        if (
-            !clickedInsideNavigation &&
-            !clickedMenuButton &&
-            navLinks.classList.contains("open")
-        ) {
-
-            navLinks.classList.remove("open");
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            menuToggle.setAttribute(
-                "aria-label",
-                "Open navigation menu"
-            );
-
-        }
-
-    });
+            const clickedInsideMenu =
+                navLinks.contains(event.target);
 
 
-    /* =========================
-       ESCAPE KEY
-       CLOSES MENU
-    ========================== */
+            const clickedMenuButton =
+                menuToggle.contains(event.target);
 
-    document.addEventListener("keydown", function (event) {
 
-        if (
-            event.key === "Escape" &&
-            navLinks.classList.contains("open")
-        ) {
+            if (
+                !clickedInsideMenu &&
+                !clickedMenuButton &&
+                navLinks.classList.contains("open")
+            ) {
 
-            navLinks.classList.remove("open");
+                navLinks.classList.remove("open");
 
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
 
-            menuToggle.setAttribute(
-                "aria-label",
-                "Open navigation menu"
-            );
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
+
+            }
 
         }
+    );
 
-    });
+
+    /* =====================================================
+       ESCAPE KEY CLOSES MENU
+    ===================================================== */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape" &&
+                navLinks.classList.contains("open")
+            ) {
+
+                navLinks.classList.remove("open");
+
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
+
+            }
+
+        }
+    );
 
 });
