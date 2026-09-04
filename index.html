@@ -1,586 +1,718 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
 
-```
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-    name="description"
-    content="Khidma Ladies Community Group — empowering women, building community and creating opportunities to connect, learn and grow."
->
+    <meta
+        name="description"
+        content="Khidma Ladies Community Group — empowering women, building community and creating opportunities to connect, learn and grow."
+    >
 
-<title>Khidma Ladies Community Group</title>
+    <title>Khidma Ladies Community Group</title>
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
-    rel="stylesheet"
->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
 
-<!-- Website CSS -->
-<link rel="stylesheet" href="css/style.css">
-```
+    <!-- Website CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
+
 <body>
 
-```
-<!-- =========================
-     NAVIGATION
-========================== -->
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
-<header class="site-header">
+    <header class="site-header">
 
-    <nav class="navbar">
+        <nav class="navbar">
 
-        <div class="logo">
+            <div class="logo">
 
-            <a href="index.html" aria-label="Khidma Ladies Community Group home">
-
-                <img
-                    src="images/khidma-logo.png"
-                    alt="Khidma Ladies Community Group"
+                <a
+                    href="index.html"
+                    aria-label="Khidma Ladies Community Group home"
                 >
 
-            </a>
+                    <img
+                        src="images/khidma-logo.png"
+                        alt="Khidma Ladies Community Group"
+                    >
 
-        </div>
-
-
-        <button
-            class="menu-toggle"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-            aria-controls="main-navigation"
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-
-        <ul class="nav-links" id="main-navigation">
-
-            <li>
-                <a href="index.html" class="active">Home</a>
-            </li>
-
-            <li>
-                <a href="pages/about.html">About</a>
-            </li>
-
-            <li>
-                <a href="pages/projects.html">Projects</a>
-            </li>
-
-            <li>
-                <a href="pages/events.html">Events</a>
-            </li>
-
-            <li>
-                <a href="pages/gallery.html">Gallery</a>
-            </li>
-
-            <li>
-                <a href="pages/volunteer.html">Volunteer</a>
-            </li>
-
-            <li>
-                <a href="pages/contact.html">Contact</a>
-            </li>
-
-        </ul>
-
-    </nav>
-
-</header>
-
-
-
-<!-- =========================
-     HERO SECTION
-========================== -->
-
-<main>
-
-    <section class="hero">
-
-        <div class="hero-overlay"></div>
-
-        <div class="hero-content">
-
-            <span class="hero-label">
-                KHIDMA LADIES COMMUNITY GROUP
-            </span>
-
-            <h1>
-                Empowering Women.<br>
-                <span>Building Community.</span>
-            </h1>
-
-            <p>
-                A welcoming space where women can connect, learn,
-                discover new opportunities and support one another.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="pages/about.html" class="btn btn-primary">
-                    Discover Khidma
-                </a>
-
-                <a href="pages/events.html" class="btn btn-outline">
-                    See Our Events
                 </a>
 
             </div>
 
-        </div>
 
-        <div class="hero-scroll">
+            <!-- Mobile Menu Button -->
 
-            <span>Scroll to explore</span>
+            <button
+                type="button"
+                class="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="main-navigation"
+            >
 
-            <span class="scroll-arrow">↓</span>
+                <span></span>
+                <span></span>
+                <span></span>
 
-        </div>
+            </button>
 
-    </section>
+
+            <!-- Main Navigation -->
+
+            <ul
+                class="nav-links"
+                id="main-navigation"
+            >
+
+                <li>
+                    <a
+                        href="index.html"
+                        class="active"
+                    >
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pages/about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pages/projects.html">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pages/events.html">
+                        Events
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pages/gallery.html">
+                        Gallery
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pages/volunteer.html">
+                        Volunteer
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pages/contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
 
 
 
     <!-- =========================
-         INTRODUCTION
+         HERO SECTION
     ========================== -->
 
-    <section class="welcome">
+    <main>
 
-        <div class="section-heading">
+        <section class="hero">
 
-            <span class="section-label">
-                WELCOME TO KHIDMA
-            </span>
+            <div class="hero-overlay"></div>
 
-            <h2>
-                A place to connect,<br>
-                <span>learn and grow together.</span>
-            </h2>
+            <div class="hero-content">
 
-        </div>
+                <span class="hero-label">
+                    KHIDMA LADIES COMMUNITY GROUP
+                </span>
 
-
-        <div class="welcome-content">
-
-            <p>
-                Khidma Ladies Community Group is a welcoming community
-                space where women can come together, build friendships,
-                develop confidence and take part in activities that
-                encourage connection, learning and wellbeing.
-            </p>
-
-            <p>
-                From creative activities and workshops to community
-                events and opportunities to learn new skills, Khidma
-                aims to create a supportive environment where every
-                woman feels welcome and valued.
-            </p>
-
-        </div>
-
-        <a href="pages/about.html" class="text-link">
-            Learn more about Khidma <span>→</span>
-        </a>
-
-    </section>
-
-
-
-    <!-- =========================
-         COMMUNITY AREAS
-    ========================== -->
-
-    <section class="community-areas">
-
-        <div class="section-heading centered">
-
-            <span class="section-label">
-                WHAT WE DO
-            </span>
-
-            <h2>
-                Creating opportunities<br>
-                <span>for women to thrive.</span>
-            </h2>
-
-        </div>
-
-
-        <div class="cards">
-
-
-            <!-- Community Support -->
-
-            <article class="card">
-
-                <div class="card-icon">
-                    <span>♡</span>
-                </div>
-
-                <div class="card-number">
-                    01
-                </div>
-
-                <h3>
-                    Community Support
-                </h3>
+                <h1>
+                    Empowering Women.<br>
+                    <span>Building Community.</span>
+                </h1>
 
                 <p>
-                    Creating a welcoming environment where women
-                    can meet, connect, build friendships and
-                    support one another.
+                    A welcoming space where women can connect, learn,
+                    discover new opportunities and support one another.
                 </p>
 
-                <a href="pages/about.html" class="card-link">
-                    Find out more <span>→</span>
-                </a>
+                <div class="hero-buttons">
 
-            </article>
+                    <a
+                        href="pages/about.html"
+                        class="btn btn-primary"
+                    >
+                        Discover Khidma
+                    </a>
 
+                    <a
+                        href="pages/events.html"
+                        class="btn btn-outline"
+                    >
+                        See Our Events
+                    </a>
 
-
-            <!-- Learning & Skills -->
-
-            <article class="card">
-
-                <div class="card-icon">
-                    <span>✦</span>
                 </div>
 
-                <div class="card-number">
-                    02
-                </div>
+            </div>
 
-                <h3>
-                    Learning &amp; Skills
-                </h3>
 
-                <p>
-                    Encouraging personal development through
-                    activities, workshops, shared experiences
-                    and opportunities to learn new skills.
-                </p>
+            <div class="hero-scroll">
 
-                <a href="pages/projects.html" class="card-link">
-                    Explore projects <span>→</span>
-                </a>
+                <span>
+                    Scroll to explore
+                </span>
 
-            </article>
+                <span class="scroll-arrow">
+                    ↓
+                </span>
+
+            </div>
+
+        </section>
 
 
 
-            <!-- Events & Activities -->
+        <!-- =========================
+             INTRODUCTION
+        ========================== -->
 
-            <article class="card">
-
-                <div class="card-icon">
-                    <span>✿</span>
-                </div>
-
-                <div class="card-number">
-                    03
-                </div>
-
-                <h3>
-                    Events &amp; Activities
-                </h3>
-
-                <p>
-                    Bringing women together through community
-                    events, gatherings, creative activities and
-                    meaningful experiences.
-                </p>
-
-                <a href="pages/events.html" class="card-link">
-                    View events <span>→</span>
-                </a>
-
-            </article>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         COMMUNITY STATEMENT
-    ========================== -->
-
-    <section class="community-statement">
-
-        <div class="statement-inner">
-
-            <span class="statement-mark">
-                “
-            </span>
-
-            <h2>
-                Together, we can create a stronger,
-                more connected community.
-            </h2>
-
-            <p>
-                Every woman has something valuable to bring.
-                Khidma is about creating a space where those
-                connections can grow.
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         GALLERY PREVIEW
-    ========================== -->
-
-    <section class="gallery-preview">
-
-        <div class="gallery-preview-content">
+        <section class="welcome">
 
             <div class="section-heading">
 
                 <span class="section-label">
-                    OUR COMMUNITY
+                    WELCOME TO KHIDMA
                 </span>
 
                 <h2>
-                    Moments that bring<br>
-                    <span>us together.</span>
+                    A place to connect,<br>
+                    <span>learn and grow together.</span>
                 </h2>
 
+            </div>
+
+
+            <div class="welcome-content">
+
                 <p>
-                    From workshops and creative activities to
-                    community gatherings, discover some of the
-                    moments that make Khidma special.
+                    Khidma Ladies Community Group is a welcoming community
+                    space where women can come together, build friendships,
+                    develop confidence and take part in activities that
+                    encourage connection, learning and wellbeing.
+                </p>
+
+                <p>
+                    From creative activities and workshops to community
+                    events and opportunities to learn new skills, Khidma
+                    aims to create a supportive environment where every
+                    woman feels welcome and valued.
                 </p>
 
             </div>
 
-            <a href="pages/gallery.html" class="btn btn-primary">
-                View Our Gallery
+
+            <a
+                href="pages/about.html"
+                class="text-link"
+            >
+                Learn more about Khidma
+                <span>→</span>
             </a>
 
-        </div>
+        </section>
 
 
-        <div class="gallery-decoration">
 
-            <div class="gallery-circle circle-one"></div>
-            <div class="gallery-circle circle-two"></div>
-            <div class="gallery-circle circle-three"></div>
+        <!-- =========================
+             COMMUNITY AREAS
+        ========================== -->
 
-            <div class="gallery-placeholder">
-                <span>KHIDMA</span>
-                <small>Community moments</small>
+        <section class="community-areas">
+
+            <div class="section-heading centered">
+
+                <span class="section-label">
+                    WHAT WE DO
+                </span>
+
+                <h2>
+                    Creating opportunities<br>
+                    <span>for women to thrive.</span>
+                </h2>
+
             </div>
 
-        </div>
 
-    </section>
+            <div class="cards">
+
+
+                <!-- Community Support -->
+
+                <article class="card">
+
+                    <div class="card-icon">
+                        <span>♡</span>
+                    </div>
+
+                    <div class="card-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Community Support
+                    </h3>
+
+                    <p>
+                        Creating a welcoming environment where women
+                        can meet, connect, build friendships and
+                        support one another.
+                    </p>
+
+                    <a
+                        href="pages/about.html"
+                        class="card-link"
+                    >
+                        Find out more
+                        <span>→</span>
+                    </a>
+
+                </article>
+
+
+
+                <!-- Learning & Skills -->
+
+                <article class="card">
+
+                    <div class="card-icon">
+                        <span>✦</span>
+                    </div>
+
+                    <div class="card-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Learning &amp; Skills
+                    </h3>
+
+                    <p>
+                        Encouraging personal development through
+                        activities, workshops, shared experiences
+                        and opportunities to learn new skills.
+                    </p>
+
+                    <a
+                        href="pages/projects.html"
+                        class="card-link"
+                    >
+                        Explore projects
+                        <span>→</span>
+                    </a>
+
+                </article>
+
+
+
+                <!-- Events & Activities -->
+
+                <article class="card">
+
+                    <div class="card-icon">
+                        <span>✿</span>
+                    </div>
+
+                    <div class="card-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Events &amp; Activities
+                    </h3>
+
+                    <p>
+                        Bringing women together through community
+                        events, gatherings, creative activities and
+                        meaningful experiences.
+                    </p>
+
+                    <a
+                        href="pages/events.html"
+                        class="card-link"
+                    >
+                        View events
+                        <span>→</span>
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             COMMUNITY STATEMENT
+        ========================== -->
+
+        <section class="community-statement">
+
+            <div class="statement-inner">
+
+                <span class="statement-mark">
+                    “
+                </span>
+
+                <h2>
+                    Together, we can create a stronger,
+                    more connected community.
+                </h2>
+
+                <p>
+                    Every woman has something valuable to bring.
+                    Khidma is about creating a space where those
+                    connections can grow.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             GALLERY PREVIEW
+        ========================== -->
+
+        <section class="gallery-preview">
+
+            <div class="gallery-preview-content">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        OUR COMMUNITY
+                    </span>
+
+                    <h2>
+                        Moments that bring<br>
+                        <span>us together.</span>
+                    </h2>
+
+                    <p>
+                        From workshops and creative activities to
+                        community gatherings, discover some of the
+                        moments that make Khidma special.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="pages/gallery.html"
+                    class="btn btn-primary"
+                >
+                    View Our Gallery
+                </a>
+
+            </div>
+
+
+            <div class="gallery-decoration">
+
+                <div class="gallery-circle circle-one"></div>
+
+                <div class="gallery-circle circle-two"></div>
+
+                <div class="gallery-circle circle-three"></div>
+
+                <div class="gallery-placeholder">
+
+                    <span>
+                        KHIDMA
+                    </span>
+
+                    <small>
+                        Community moments
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             GET INVOLVED
+        ========================== -->
+
+        <section class="call-to-action">
+
+            <div class="cta-content">
+
+                <span class="section-label light">
+                    GET INVOLVED
+                </span>
+
+                <h2>
+                    There is a place<br>
+                    <span>for everyone at Khidma.</span>
+                </h2>
+
+                <p>
+                    Whether you want to volunteer, attend an event,
+                    take part in an activity or simply learn more,
+                    we would love to welcome you.
+                </p>
+
+                <div class="cta-buttons">
+
+                    <a
+                        href="pages/volunteer.html"
+                        class="btn btn-white"
+                    >
+                        Get Involved
+                    </a>
+
+                    <a
+                        href="pages/contact.html"
+                        class="btn btn-transparent"
+                    >
+                        Contact Us
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
 
 
 
     <!-- =========================
-         GET INVOLVED
+         FOOTER
     ========================== -->
 
-    <section class="call-to-action">
+    <footer>
 
-        <div class="cta-content">
+        <div class="footer-inner">
 
-            <span class="section-label light">
-                GET INVOLVED
-            </span>
 
-            <h2>
-                There is a place<br>
-                <span>for everyone at Khidma.</span>
-            </h2>
+            <!-- Footer Brand -->
 
-            <p>
-                Whether you want to volunteer, attend an event,
-                take part in an activity or simply learn more,
-                we would love to welcome you.
-            </p>
+            <div class="footer-brand">
 
-            <div class="cta-buttons">
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
 
-                <a href="pages/volunteer.html" class="btn btn-white">
-                    Get Involved
+                    <img
+                        src="images/khidma-logo.png"
+                        alt="Khidma Ladies Community Group"
+                    >
+
                 </a>
 
-                <a href="pages/contact.html" class="btn btn-transparent">
-                    Contact Us
+                <p>
+                    Empowering women.<br>
+                    Building community.
+                </p>
+
+            </div>
+
+
+
+            <!-- Footer Links -->
+
+            <div class="footer-links">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <a href="index.html">
+                    Home
                 </a>
+
+                <a href="pages/about.html">
+                    About
+                </a>
+
+                <a href="pages/projects.html">
+                    Projects
+                </a>
+
+                <a href="pages/events.html">
+                    Events
+                </a>
+
+                <a href="pages/gallery.html">
+                    Gallery
+                </a>
+
+                <a href="pages/volunteer.html">
+                    Volunteer
+                </a>
+
+                <a href="pages/contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+
+            <!-- Footer Social Media -->
+
+            <div class="footer-social-section">
+
+                <h3>
+                    Follow Khidma
+                </h3>
+
+                <p>
+                    Keep up with our latest activities,
+                    events and community updates.
+                </p>
+
+
+                <div class="footer-social">
+
+
+                    <!-- Facebook -->
+
+                    <a
+                        href="https://www.facebook.com/p/Khidma-Ladies-Community-Group-100086291350616/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Follow Khidma on Facebook"
+                    >
+
+                        <span>
+                            f
+                        </span>
+
+                        Facebook
+
+                    </a>
+
+
+
+                    <!-- Instagram -->
+
+                    <a
+                        href="https://www.instagram.com/khidmaladiescommunity/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Follow Khidma on Instagram"
+                    >
+
+                        <span>
+                            ◎
+                        </span>
+
+                        Instagram
+
+                    </a>
+
+
+
+                    <!-- TikTok -->
+
+                    <a
+                        href="https://www.tiktok.com/@khidmaladies"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Follow Khidma on TikTok"
+                    >
+
+                        <span>
+                            ♪
+                        </span>
+
+                        TikTok
+
+                    </a>
+
+
+
+                    <!-- X -->
+
+                    <a
+                        href="https://x.com/KhidmaGroup"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Follow Khidma on X"
+                    >
+
+                        <span>
+                            𝕏
+                        </span>
+
+                        X
+
+                    </a>
+
+                </div>
 
             </div>
 
         </div>
 
-    </section>
 
-</main>
+        <!-- Footer Bottom -->
 
-
-
-<!-- =========================
-     FOOTER
-========================== -->
-
-<footer>
-
-    <div class="footer-inner">
-
-
-        <div class="footer-brand">
-
-            <a href="index.html" class="footer-logo">
-
-                <img
-                    src="images/khidma-logo.png"
-                    alt="Khidma Ladies Community Group"
-                >
-
-            </a>
+        <div class="footer-bottom">
 
             <p>
-                Empowering women.<br>
-                Building community.
+                © 2026 Khidma Ladies Community Group.
+                All rights reserved.
+            </p>
+
+            <p>
+                Empowering women • Building community
             </p>
 
         </div>
 
-
-
-        <div class="footer-links">
-
-            <h3>
-                Explore
-            </h3>
-
-            <a href="index.html">Home</a>
-
-            <a href="pages/about.html">About</a>
-
-            <a href="pages/projects.html">Projects</a>
-
-            <a href="pages/events.html">Events</a>
-
-            <a href="pages/gallery.html">Gallery</a>
-
-            <a href="pages/volunteer.html">Volunteer</a>
-
-            <a href="pages/contact.html">Contact</a>
-
-        </div>
+    </footer>
 
 
 
-        <div class="footer-social-section">
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
 
-            <h3>
-                Follow Khidma
-            </h3>
-
-            <p>
-                Keep up with our latest activities,
-                events and community updates.
-            </p>
-
-
-            <div class="footer-social">
-
-
-                <a
-                    href="https://www.facebook.com/p/Khidma-Ladies-Community-Group-100086291350616/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Follow Khidma on Facebook"
-                >
-                    <span>f</span>
-                    Facebook
-                </a>
-
-
-                <a
-                    href="https://www.instagram.com/khidmaladiescommunity/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Follow Khidma on Instagram"
-                >
-                    <span>◎</span>
-                    Instagram
-                </a>
-
-
-                <a
-                    href="https://www.tiktok.com/@khidmaladies"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Follow Khidma on TikTok"
-                >
-                    <span>♪</span>
-                    TikTok
-                </a>
-
-
-                <a
-                    href="https://x.com/KhidmaGroup"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Follow Khidma on X"
-                >
-                    <span>𝕏</span>
-                    X
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 Khidma Ladies Community Group. All rights reserved.
-        </p>
-
-        <p>
-            Empowering women • Building community
-        </p>
-
-    </div>
-
-</footer>
-
-
-
-<!-- JavaScript -->
-
-<script src="js/script.js"></script>
-```
+    <script src="js/script.js"></script>
 
 </body>
 
