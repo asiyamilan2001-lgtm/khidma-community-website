@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
@@ -13,58 +12,57 @@ body {
 }
 
 
-
-/* Navigation */
+/* =========================
+   Navigation
+========================= */
 
 header {
-    background: white;
-    box-shadow: 0 4px 15px rgba(106, 27, 154, 0.15);
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(40, 153, 138, 0.15);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+    padding: 12px 8%;
 }
 
+/* Logo image */
 
-.logo {
-    font-size: 30px;
-    font-weight: 700;
-    color: #6A1B9A;
+.logo img {
+    height: 75px;
+    width: auto;
+    display: block;
 }
-
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 25px;
+    align-items: center;
 }
-
 
 .nav-links a {
     text-decoration: none;
-    color: #4A148C;
+    color: #176F65;
     font-weight: 500;
     transition: 0.3s;
 }
 
-
 .nav-links a:hover {
-    color: #D4A017;
+    color: #28998A;
 }
 
 
-
-/* Hero */
+/* =========================
+   Hero
+========================= */
 
 .hero {
-
     min-height: 85vh;
     display: flex;
     align-items: center;
@@ -72,290 +70,240 @@ header {
 
     background:
     linear-gradient(
-        rgba(74,20,140,0.75),
-        rgba(106,27,154,0.75)
+        rgba(23, 111, 101, 0.78),
+        rgba(40, 153, 138, 0.78)
     ),
     url("../images/community.jpg");
 
     background-size: cover;
     background-position: center;
-
 }
-
 
 .hero-content {
-
     max-width: 700px;
     color: white;
-
 }
 
-
 .hero h1 {
-
     font-size: 55px;
     line-height: 1.2;
     margin-bottom: 20px;
-
 }
-
 
 .hero p {
-
     font-size: 18px;
     margin-bottom: 30px;
-
 }
 
 
-
-/* Buttons */
+/* =========================
+   Buttons
+========================= */
 
 .btn {
-
     display: inline-block;
-    background: #D4A017;
-    color: white;
+    background: #ffffff;
+    color: #176F65;
     padding: 14px 35px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     transition: 0.3s;
-
 }
-
 
 .btn:hover {
-
     transform: translateY(-3px);
-    background: #b8860b;
-
+    background: #E8F5F3;
+    color: #176F65;
 }
 
 
-
-/* Welcome */
+/* =========================
+   Welcome
+========================= */
 
 .welcome {
-
     padding: 80px 10%;
     text-align: center;
-
 }
-
 
 .welcome h1,
 .welcome h2 {
-
-    color: #6A1B9A;
+    color: #176F65;
     font-size: 38px;
     margin-bottom: 20px;
-
 }
 
-
 .welcome p {
-
     max-width: 850px;
     margin: auto;
     font-size: 17px;
-
 }
 
 
-
-/* Cards */
+/* =========================
+   Cards
+========================= */
 
 .cards {
-
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
     padding: 60px 8%;
-
+    background: #F4FAF9;
 }
 
-
 .card {
-
     background: #ffffff;
     padding: 35px;
     border-radius: 20px;
 
-    border-top: 5px solid #6A1B9A;
+    border-top: 5px solid #28998A;
 
     box-shadow:
-    0 10px 25px rgba(106,27,154,0.12);
+    0 10px 25px rgba(40, 153, 138, 0.12);
 
     transition: 0.3s;
-
 }
-
 
 .card:hover {
-
     transform: translateY(-8px);
-
+    box-shadow:
+    0 15px 30px rgba(40, 153, 138, 0.18);
 }
-
 
 .card h3 {
-
-    color: #6A1B9A;
+    color: #176F65;
     margin-bottom: 15px;
-
 }
 
 
-
-/* Gallery */
+/* =========================
+   Gallery
+========================= */
 
 .gallery {
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-    padding:60px 8%;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 60px 8%;
 }
-
 
 .gallery-item {
+    overflow: hidden;
+    border-radius: 20px;
 
-    overflow:hidden;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(106,27,154,0.15);
-
+    box-shadow:
+    0 10px 25px rgba(40, 153, 138, 0.15);
 }
-
 
 .gallery-item img {
-
-    width:100%;
-    height:280px;
-    object-fit:cover;
-    transition:0.4s;
-
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: 0.4s;
 }
-
 
 .gallery-item img:hover {
-
-    transform:scale(1.08);
-
+    transform: scale(1.08);
 }
 
 
-
-/* Gallery Preview */
+/* =========================
+   Gallery Preview
+========================= */
 
 .gallery-preview {
-
-    text-align:center;
-    padding:80px 10%;
-    background:#EDE7F6;
-
+    text-align: center;
+    padding: 80px 10%;
+    background: #E8F5F3;
 }
-
 
 .gallery-preview h2 {
-
-    color:#6A1B9A;
-    font-size:36px;
-    margin-bottom:15px;
-
+    color: #176F65;
+    font-size: 36px;
+    margin-bottom: 15px;
 }
 
 
-
-/* Call To Action */
+/* =========================
+   Call To Action
+========================= */
 
 .call-to-action {
-
     background:
     linear-gradient(
-    135deg,
-    #6A1B9A,
-    #4A148C
+        135deg,
+        #28998A,
+        #176F65
     );
 
-    color:white;
-    padding:80px 10%;
-    text-align:center;
-
+    color: white;
+    padding: 80px 10%;
+    text-align: center;
 }
-
 
 .call-to-action h2 {
-
-    font-size:36px;
-    margin-bottom:20px;
-
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
 
-
-/* New Footer */
+/* =========================
+   Footer
+========================= */
 
 footer {
-
-    background:#2d0b3d;
-    color:white;
-    text-align:center;
-    padding:45px 10%;
-
+    background: #104F48;
+    color: white;
+    text-align: center;
+    padding: 45px 10%;
 }
-
 
 footer p {
-
-    margin-bottom:15px;
-
+    margin-bottom: 15px;
 }
-
 
 .footer-social {
-
-    margin-top:20px;
-
+    margin-top: 20px;
 }
-
 
 .footer-social a {
-
-    color:white;
-    text-decoration:none;
-    margin:0 10px;
-    font-size:18px;
-    transition:0.3s;
-
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: 0.3s;
 }
-
 
 .footer-social a:hover {
-
-    color:#D4A017;
-
+    color: #A8DDD5;
 }
 
 
+/* =========================
+   Mobile
+========================= */
 
-/* Mobile */
+@media(max-width: 768px) {
 
-@media(max-width:768px){
+    .navbar {
+        padding: 10px 5%;
+    }
+
+    .logo img {
+        height: 60px;
+    }
 
     .nav-links {
-        display:none;
+        display: none;
     }
-
 
     .hero h1 {
-        font-size:38px;
+        font-size: 38px;
     }
-
 
     .cards {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
-
 }
