@@ -1,19 +1,39 @@
+
+Those **must NOT be inside the actual `.js` file**. If they are there, the browser treats them as invalid JavaScript and the entire script fails — which is exactly why pressing the menu button does nothing.
+
+### Do this exactly
+
+Open:
+
+**`js` → `script.js`**
+
+Delete **everything** currently inside it, then replace it with this **full file**:
+
+```javascript
 document.addEventListener("DOMContentLoaded", function () {
 
-```
-console.log("Khidma website loaded successfully");
+    console.log("Khidma website loaded successfully");
 
+    /* =========================
+       MOBILE NAVIGATION
+    ========================== */
 
-/* =========================
-   MOBILE NAVIGATION
-========================== */
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector("#main-navigation");
 
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+    if (!menuToggle || !navLinks) {
+        console.error("Khidma mobile navigation elements not found.");
+        return;
+    }
 
-if (menuToggle && navLinks) {
+    /* =========================
+       OPEN / CLOSE MENU
+    ========================== */
 
-    menuToggle.addEventListener("click", function () {
+    menuToggle.addEventListener("click", function (event) {
+
+        event.preventDefault();
+        event.stopPropagation();
 
         const isOpen = navLinks.classList.toggle("open");
 
@@ -32,7 +52,9 @@ if (menuToggle && navLinks) {
     });
 
 
-    /* Close menu when a navigation link is clicked */
+    /* =========================
+       CLOSE MENU WHEN LINK IS CLICKED
+    ========================== */
 
     const navigationLinks = navLinks.querySelectorAll("a");
 
@@ -56,84 +78,68 @@ if (menuToggle && navLinks) {
 
     });
 
-}
 
+    /* =========================
+       CLOSE MENU WHEN CLICKING OUTSIDE
+    ========================== */
 
-/* =========================
-   CLOSE MENU WHEN CLICKING
-   OUTSIDE THE NAVIGATION
-========================== */
+    document.addEventListener("click", function (event) {
 
-document.addEventListener("click", function (event) {
+        const clickedInsideNavigation =
+            navLinks.contains(event.target);
 
-    if (!menuToggle || !navLinks) {
-        return;
-    }
-
-    const clickedInsideMenu =
-        navLinks.contains(event.target);
-
-    const clickedMenuButton =
-        menuToggle.contains(event.target);
-
-    if (
-        !clickedInsideMenu &&
-        !clickedMenuButton &&
-        navLinks.classList.contains("open")
-    ) {
-
-        navLinks.classList.remove("open");
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-        menuToggle.setAttribute(
-            "aria-label",
-            "Open navigation menu"
-        );
-
-    }
-
-});
-
-
-/* =========================
-   ESCAPE KEY
-   CLOSES MOBILE MENU
-========================== */
-
-document.addEventListener("keydown", function (event) {
-
-    if (event.key === "Escape") {
+        const clickedMenuButton =
+            menuToggle.contains(event.target);
 
         if (
-            navLinks &&
+            !clickedInsideNavigation &&
+            !clickedMenuButton &&
             navLinks.classList.contains("open")
         ) {
 
             navLinks.classList.remove("open");
 
-            if (menuToggle) {
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
 
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
-
-            }
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
 
         }
 
-    }
+    });
 
-});
-```
+
+    /* =========================
+       ESCAPE KEY
+       CLOSES MENU
+    ========================== */
+
+    document.addEventListener("keydown", function (event) {
+
+        if (
+            event.key === "Escape" &&
+            navLinks.classList.contains("open")
+        ) {
+
+            navLinks.classList.remove("open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+        }
+
+    });
 
 });
